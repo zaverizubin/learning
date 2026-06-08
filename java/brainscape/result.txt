@@ -1,0 +1,51 @@
+
+Word: [Amenable (adj)]
+ Found 2 times in: [1.txt, 7a.txt]
+
+Word: [Exegesis (n)]
+ Found 2 times in: [16.txt, 4a.txt]
+
+Word: [Pantheon (n)]
+ Found 2 times in: [5.txt, 7a.txt]
+
+Word: [Cozen (v)]
+ Found 2 times in: [1.txt, 6a.txt]
+
+Word: [Extenuate (v)]
+ Found 2 times in: [1.txt, 5a.txt]
+
+Word: [Stygian (adj)]
+ Found 2 times in: [1.txt, 7a.txt]
+
+Word: [Neurosis (n)]
+ Found 2 times in: [14.txt, 16.txt]
+
+Word: [Hunker (v)]
+ Found 2 times in: [3a.txt, 9a.txt]
+
+Word: [Traduce (v)]
+ Found 2 times in: [1.txt, 6a.txt]
+
+Word: [Inure (v)]
+ Found 2 times in: [2.txt, 8a.txt]
+
+Word: [Rectitude (n)]
+ Found 2 times in: [7.txt, 7a.txt]
+
+Word: [Fatuous (adj)]
+ Found 3 times in: [16.txt, 7.txt, 7a.txt]
+
+Word: [Diatribe (n)]
+ Found 2 times in: [6.txt, 7a.txt]
+
+Word: [Syncretism (n)]
+ Found 2 times in: [10.txt, 9a.txt]
+
+Word: [Reverie (n)]
+ Found 2 times in: [11.txt, 3a.txt]
+
+Word: [Mortification (n)]
+ Found 2 times in: [1a.txt, 5a.txt]
+
+Word: [Mien (n)]
+ Found 2 times in: [5a.txt, 7.txt]
