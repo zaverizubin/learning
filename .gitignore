@@ -37,3 +37,9 @@ java/core_java/.classpath
 java/core_java/.DS_Store
 java/core_java/.gitignore
 java/core_java/.project
+java/youtube-javabrains/
+java/brainscape/.idea/
+java/aspectj/.idea/
+java/jobrunner/jobrunr-pro/.idea/
+java/jobrunner/jobrunr-server/.idea/
+java/spring/spring-aop/.idea/
