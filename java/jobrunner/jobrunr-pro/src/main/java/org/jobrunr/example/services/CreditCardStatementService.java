@@ -1,6 +1,6 @@
-package org.jobrunr.example.autoretries;
+package org.jobrunr.example.services;
 
-import org.jobrunr.example.customerOnboarding.CreditCardRepository;
+import org.jobrunr.example.repository.CreditCardRepository;
 import org.jobrunr.example.model.CreditCard;
 import org.jobrunr.jobs.annotations.Job;
 import org.jobrunr.jobs.annotations.Recurring;
@@ -82,8 +82,13 @@ public class CreditCardStatementService {
 
     @Job(name = "Generate Summary Report",  retries = 3)
     public void generateSummaryReport() {
-        generatePDFThatSometimesFails();
-        LOGGER.info("Summary Report generated");
+        try {
+            this.jobScheduler.enqueue(() -> generatePDFThatSometimesFails());
+            LOGGER.info("Summary Report generated");
+        }catch (RuntimeException ex){
+            LOGGER.error("Summary Report error");
+        }
+
     }
 
     // Step 8: Notification job that runs when the batch fails
@@ -96,14 +101,14 @@ public class CreditCardStatementService {
         // In production, this would send to Slack, PagerDuty, email, etc.
     }
 
-    private static void generatePDFThatSometimesFails() {
-        if (RANDOM.nextInt(10) + 1 > 5) {
+    public static void generatePDFThatSometimesFails() {
+        if (RANDOM.nextInt(10) + 1 > 8) {
             throw new RuntimeException("Something went wrong while generating pdf");
         }
         generatePDF();
     }
 
-    private static void generatePDF() {
+    public static void generatePDF() {
         // Pretend PDFs are being generated
         try {
             Thread.sleep(5000);

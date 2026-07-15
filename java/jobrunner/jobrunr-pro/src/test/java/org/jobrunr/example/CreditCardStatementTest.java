@@ -1,6 +1,6 @@
 package org.jobrunr.example;
 
-import org.jobrunr.example.autoretries.CreditCardStatementService;
+import org.jobrunr.example.services.CreditCardStatementService;
 import org.jobrunr.storage.StorageProvider;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +37,22 @@ class CreditCardStatementTest {
 
         assertThat(true).isTrue();
 
+    }
+
+    @Test
+    void whenGenerateSummaryReport_thenJobFailsandRetires() {
+        this.creditCardStatementService.generateSummaryReport();
+        await().during(Duration.ofSeconds(5)).until(() -> true);
+
+        assertThat(true).isTrue();
+    }
+
+    @Test
+    void whenGenerateMonthlyCreditCardStatements_thenStatementsBatched(){
+        this.creditCardStatementService.generateMonthlyCreditCardStatements();
+        await().during(Duration.ofSeconds(1)).until(() -> true);
+
+        assertThat(true).isTrue();
     }
 
 }

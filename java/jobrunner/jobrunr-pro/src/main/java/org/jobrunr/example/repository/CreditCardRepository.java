@@ -1,4 +1,4 @@
-package org.jobrunr.example.customerOnboarding;
+package org.jobrunr.example.repository;
 
 import org.jobrunr.example.model.CreditCard;
 import org.slf4j.Logger;
@@ -20,13 +20,19 @@ public class CreditCardRepository {
 
     public List<CreditCard> findAll(){
         final List<CreditCard> creditCards =  new ArrayList<>();
-        creditCards.add(new CreditCard("12345", "x.x@gmail.com"));
-        creditCards.add(new CreditCard("67890","y.y@gmail.com"));
+        for(int i =0; i<100;i++){
+            creditCards.add(new CreditCard("123" + i, "x."+i+"x@gmail.com"));
+        }
+
         return creditCards;
     }
 
     public CreditCard save(final CreditCard creditCard){
         LOGGER.info("Saving credit card: {}", creditCard);
         return creditCard;
+    }
+
+    public Optional<CreditCard> findById(final String creditCardId) {
+        return Optional.of(new CreditCard(creditCardId));
     }
 }

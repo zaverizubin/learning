@@ -1,5 +1,7 @@
 package org.jobrunr.example.model;
 
+import org.jobrunr.example.enums.CreditCardType;
+
 public class CreditCard {
 
     private  String email;
@@ -37,8 +39,18 @@ public class CreditCard {
         return this.active;
     }
 
+    public CreditCardType getType() {
+        return CreditCardType.PREMIUM;
+    }
+
+    public void deductBalance(final Object amount) {
+        //do nothing
+    }
+
     @Override
     public String toString() {
         return this.email;
     }
+
+
 }

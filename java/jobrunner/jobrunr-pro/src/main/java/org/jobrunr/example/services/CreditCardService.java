@@ -1,6 +1,9 @@
-package org.jobrunr.example.customerOnboarding;
+package org.jobrunr.example.services;
 
+import org.jobrunr.example.events.CreditCardActivatedEvent;
+import org.jobrunr.example.events.CreditCardRegisteredEvent;
 import org.jobrunr.example.model.CreditCard;
+import org.jobrunr.example.repository.CreditCardRepository;
 import org.jobrunr.jobs.JobId;
 import org.jobrunr.jobs.annotations.Job;
 import org.jobrunr.scheduling.JobScheduler;
